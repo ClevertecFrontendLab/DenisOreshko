@@ -93,6 +93,9 @@
     flex-direction: column;
     align-items: center;
 }
+.mini-card button{
+    border: none;
+}
 .card-head {
     display: flex;
     align-items:center;
