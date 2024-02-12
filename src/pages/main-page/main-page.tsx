@@ -49,17 +49,23 @@ export const MainPage: React.FC = () => {
                                 <div className='mini-card'>
                                     <div className='card-head'>Расписать тренировки</div>
                                     <Divider />
-                                    <Button><HeartFilled style={{ color: '#2F54EB' }}/>Тренировки</Button>
+                                    <div className='mini-card-btn-box'>
+                                        <Button><HeartFilled style={{ color: '#2F54EB' }}/>Тренировки</Button>
+                                    </div>
                                 </div>
                                 <div className='mini-card'>
                                     <div className='card-head'>Назначить календарь</div>
                                     <Divider />
-                                    <Button><CalendarTwoTone style={{ color: '#2F54EB' }} twoToneColor="#2F54EB"/>Календарь</Button>                                    
+                                    <div className='mini-card-btn-box'>
+                                        <Button><CalendarTwoTone style={{ color: '#2F54EB' }} twoToneColor="#2F54EB"/>Календарь</Button> 
+                                    </div>                                   
                                 </div>
                                 <div className='mini-card'>
                                     <div className='card-head'>Заполнить профиль</div>
                                     <Divider />
-                                    <Button><IdcardFilled style={{ color: '#2F54EB' }}/>Профиль</Button>
+                                    <div className='mini-card-btn-box'>
+                                        <Button><IdcardFilled style={{ color: '#2F54EB' }}/>Профиль</Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>    

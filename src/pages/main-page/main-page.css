@@ -109,4 +109,9 @@
     flex-direction: column;
     gap: 12px;
 }
-
+.mini-card-btn-box{
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
