@@ -95,6 +95,7 @@
 }
 .mini-card button{
     border: none;
+    box-shadow:none;
 }
 .card-head {
     display: flex;
