@@ -13,14 +13,18 @@ import { LinkOutlined,
     IdcardOutlined, 
     TrophyFilled,
     AppleFilled,
-    AndroidFilled  } from '@ant-design/icons';
+    AndroidFilled,
+    MenuFoldOutlined,
+    MenuUnfoldOutlined,  } from '@ant-design/icons';
 
 import 'antd/dist/antd.css';
 import './main-page.css';
 import Logo from '../../resources/img/logo.svg';
+import Exit from '../../resources/img/exit.svg';
 
 
-export const MainPage: React.FC = () => {    
+export const MainPage: React.FC = () => {  
+    const [collapsed, setCollapsed] = useState(false);  
     return (
         <>
             <div className="main-container">
@@ -29,7 +33,7 @@ export const MainPage: React.FC = () => {
                         <div className='logo'>
                             <img src={Logo} alt="Logo"/>
                         </div>
-                        <div>
+                        <div className='slider-menu-box'>
                             <ul className='menu-ul'>
                                 <li>
                                     <Button>
@@ -56,6 +60,7 @@ export const MainPage: React.FC = () => {
                                     </Button>
                                 </li>
                             </ul>
+                            <Button className='exit-btn'><img src={Exit}/>Выход</Button>
                         </div>
                     </Sider>
                     <Layout>
@@ -65,7 +70,7 @@ export const MainPage: React.FC = () => {
                                 <Breadcrumb.Item>Главная</Breadcrumb.Item>
                             </Breadcrumb>
                             <div className='header-title-setting-box'>
-                                <h1>Приветствуем тебя в CleverFit — приложении, 
+                                <h1>Приветствуем тебя в CleverFit — приложении,<br/> 
                                 которое поможет тебе добиться своей мечты!
                                 </h1>
                                 <Button className='btn-settings'>
@@ -74,7 +79,7 @@ export const MainPage: React.FC = () => {
                         </div>
                         </Header>
                         <Content>
-                        <div className='card-box actions'>
+                            <div className='card-box actions'>
                                 CleverFit ты сможешь:
                                 <br/>— планировать свои тренировки 
                                 на календаре, выбирая тип и уровень нагрузки; 
@@ -84,7 +89,8 @@ export const MainPage: React.FC = () => {
                                 <br/>— создавать свой профиль, где ты можешь 
                                 загружать свои фото, видео и отзывы о тренировках; 
                                 <br/>— выполнять расписанные тренировки для разных частей тела, следуя подробным инструкциям 
-                                и советам профессиональных тренеров.</div>
+                                и советам профессиональных тренеров.
+                            </div>
                             <div className='container-big-mini'>
                                 <div className='card-box wrapp'>
                                     CleverFit — это не просто приложение,
