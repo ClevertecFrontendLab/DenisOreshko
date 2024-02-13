@@ -3,9 +3,23 @@
     min-height: 1024px;
     margin: auto;
     background: url('/src/resources/img/Main\ page_light.png');
+    
 }
 .ant-layout{
     background:none;
+    position: relative;    
+}
+.side-menu-switcher{
+    border: 1px solid #000;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -33px;
+    bottom: auto;
+    display: flex;
+    background:#FFFFFF;
+    width: 20px;
+    height: 66px;
 }
 .ant-layout-sider {
     color: #262626;
@@ -29,10 +43,13 @@
     color: #262626;
     background-color:#F0F5FF;
     line-height:1.5;
-    height:fit-content;
+    height:168px;
     padding: 16px 24px 16px 24px; 
-    
 }   
+.h-wrapper{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
 .ant-layout-content {
     padding: 24px;
     color: #262626;  
@@ -46,6 +63,7 @@
     color: #262626;
     background: #f5f4fa38;
 }
+
 .header-box{
     display: flex;
     flex-direction: column;
@@ -161,7 +179,7 @@
     line-height: 18.2px;
 }
 .footer-box{
-    padding: 0px 24px 24px 42px;
+    padding: 0px 24px 42px 24px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;

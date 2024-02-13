@@ -28,8 +28,8 @@ export const MainPage: React.FC = () => {
     return (
         <>
             <div className="main-container">
-                <Layout>
-                    <Sider data-test-id="slider-switch" width={208} trigger={null} collapsible collapsed={collapsed}>
+                <Layout>                    
+                    <Sider data-test-id='slider-switch' width={208} trigger={null} collapsible collapsed={collapsed}>
                         <div className='slider-menu-box'>
                             <div>
                                 <div className='logo'>
@@ -72,9 +72,11 @@ export const MainPage: React.FC = () => {
                                 <Breadcrumb.Item>Главная</Breadcrumb.Item>
                             </Breadcrumb>
                             <div className='header-title-setting-box'>
-                                <h1>Приветствуем тебя в CleverFit — приложении,<br/> 
-                                которое поможет тебе добиться своей мечты!
-                                </h1>
+                                <div className='h-wrapper'>
+                                    <h1>Приветствуем тебя в CleverFit — приложении,<br/> 
+                                    которое поможет тебе добиться своей мечты!
+                                    </h1>
+                                </div>
                                 <Button className='btn-settings'>
                                 <SettingOutlined />Настройки</Button>
                             </div>
@@ -93,15 +95,17 @@ export const MainPage: React.FC = () => {
                                 <br/>— выполнять расписанные тренировки для разных частей тела, следуя подробным инструкциям 
                                 и советам профессиональных тренеров.
                             </div>
-                            {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                                className: 'trigger',
-                                onClick: () => setCollapsed(!collapsed),
-                            })}
+                            <div className='side-menu-switcher'>
+                                {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                                    className: 'trigger',
+                                    onClick: () => setCollapsed(!collapsed),
+                                })}
+                            </div>
                             <div className='container-big-mini'>
                                 <div className='card-box wrapp'>
-                                    CleverFit — это не просто приложение,
-                                    а твой личный помощник в мире фитнеса.
-                                    Не откладывай на завтра — начни тренироваться уже сегодня!
+                                CleverFit — это не просто приложение, а твой личный помощник
+                                <br/> в мире фитнеса. Не откладывай на завтра — начни тренироваться
+                                 <br/>уже сегодня!
                                 </div>
                                 <div className='mini-card-box'>
                                     <div className='mini-card'>
