@@ -30,36 +30,38 @@ export const MainPage: React.FC = () => {
             <div className="main-container">
                 <Layout>
                     <Sider data-test-id="slider-switch" style={{width:500}} trigger={null} collapsible>
-                        <div className='logo'>
-                            <img src={Logo} alt="Logo"/>
-                        </div>
                         <div className='slider-menu-box'>
-                            <ul className='menu-ul'>
-                                <li>
-                                    <Button>
-                                        <CalendarTwoTone style={{ color: '#2F54EB' }} twoToneColor="#2F54EB"/>
-                                        Календарь
-                                    </Button> 
-                                </li>
-                                <li>
-                                    <Button>
-                                        <HeartFilled style={{ color: '#2F54EB' }}/>
-                                        Тренировки
-                                    </Button>
-                                </li>
-                                <li>
-                                    <Button>
-                                        <TrophyFilled  style={{ color: '#2F54EB' }}/>
-                                        Достижения
-                                    </Button>
-                                </li>
-                                <li>
-                                    <Button>
-                                        <IdcardOutlined  style={{ color: '#2F54EB' }}/>
-                                        Профиль
-                                    </Button>
-                                </li>
-                            </ul>
+                            <div>
+                                <div className='logo'>
+                                    <img src={Logo} alt="Logo"/>
+                                </div>
+                                <ul className='menu-ul'>
+                                    <li>
+                                        <Button>
+                                            <CalendarTwoTone style={{ color: '#2F54EB' }} twoToneColor="#2F54EB"/>
+                                            Календарь
+                                        </Button> 
+                                    </li>
+                                    <li>
+                                        <Button>
+                                            <HeartFilled style={{ color: '#2F54EB' }}/>
+                                            Тренировки
+                                        </Button>
+                                    </li>
+                                    <li>
+                                        <Button>
+                                            <TrophyFilled  style={{ color: '#2F54EB' }}/>
+                                            Достижения
+                                        </Button>
+                                    </li>
+                                    <li>
+                                        <Button>
+                                            <IdcardOutlined  style={{ color: '#2F54EB' }}/>
+                                            Профиль
+                                        </Button>
+                                    </li>
+                                </ul>
+                            </div>
                             <Button className='exit-btn'><img src={Exit}/>Выход</Button>
                         </div>
                     </Sider>
