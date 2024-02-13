@@ -29,7 +29,7 @@ export const MainPage: React.FC = () => {
         <>
             <div className="main-container">
                 <Layout>
-                    <Sider data-test-id="slider-switch" style={{width:500}} trigger={null} collapsible>
+                    <Sider data-test-id="slider-switch" width={208} trigger={null} collapsible>
                         <div className='slider-menu-box'>
                             <div>
                                 <div className='logo'>
