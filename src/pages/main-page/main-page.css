@@ -10,16 +10,18 @@
     position: relative;    
 }
 .side-menu-switcher{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     position: absolute;
     left: 0;
     top: 50%;
     margin-top: -33px;
     bottom: auto;
     display: flex;
-    background:#FFFFFF;
+    /* background:#FFFFFF; */
+    background-image:url('/src/resources/img/Rectangle376.svg');
     width: 20px;
     height: 66px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.015);
 }
 .ant-layout-sider {
     color: #262626;
@@ -30,15 +32,19 @@
     width: 208px;
     height: 1024px;
     min-height: 1024px;
-    position: relative;
+    z-index: 1;
+    /* position: relative; */
     /* min-height: 100dvh; */
+    /* -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.015);
+    -moz-box-shadow: inset 0px 2px 0px 0px rgba(0,0,0,0.00); */
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.015);
 }
-.slider{
+/* .slider{
     flex: 0 0 208px;
     max-width: 208px;
     min-width: 208px;
     width: 208px;
-}
+} */
 .ant-layout-header {  
     color: #262626;
     background-color:#F0F5FF;
