@@ -11,7 +11,9 @@ import { LinkOutlined,
     CalendarTwoTone, 
     IdcardFilled, 
     IdcardOutlined, 
-    TrophyFilled  } from '@ant-design/icons';
+    TrophyFilled,
+    AppleFilled,
+    AndroidFilled  } from '@ant-design/icons';
 
 import 'antd/dist/antd.css';
 import './main-page.css';
@@ -114,7 +116,24 @@ export const MainPage: React.FC = () => {
                                 </div>
                             </div>
                         </Content>
-                        <Footer>Footer</Footer>
+                        <Footer>
+                            <div className='footer-box'>
+                                <div className='show-reviews'>
+                                    <a href='#' className='download-phone'>Смотреть отзывы</a>
+                                </div>
+                                <div className='card-box download-app'>
+                                     <div className='download-header'>
+                                        <a href='#' className='download-phone'>Скачать на телефон</a>
+                                        <div className='pro-style'>Доступно в PRO-тарифе</div>
+                                    </div>
+                                    <Divider></Divider>
+                                    <div className='download-footer'>
+                                        <Button><AndroidFilled/>Android OS</Button>
+                                        <Button><AppleFilled  />Apple iOS</Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </Footer>
                     </Layout>
                 </Layout>
             </div>  
