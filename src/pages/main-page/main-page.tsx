@@ -1,21 +1,34 @@
-import React from 'react';
-import { Breadcrumb, Button, Layout, Divider } from 'antd';
+import React, { useState } from 'react';
+import { Breadcrumb, Button, Layout, Divider, Menu, Switch  } from 'antd';
+import type { MenuProps, MenuTheme } from 'antd/es/menu';
 const { Header, Footer, Sider, Content } = Layout;
-import { SettingOutlined, HeartFilled, CalendarTwoTone, IdcardFilled, IdcardOutlined, TrophyFilled  } from '@ant-design/icons';
+import { LinkOutlined, 
+    MailOutlined, 
+    AppstoreOutlined, 
+    SettingOutlined, 
+    HeartFilled, 
+    CalendarOutlined, 
+    CalendarTwoTone, 
+    IdcardFilled, 
+    IdcardOutlined, 
+    TrophyFilled  } from '@ant-design/icons';
+
 import 'antd/dist/antd.css';
 import './main-page.css';
 import Logo from '../../resources/img/logo.svg';
 
+
 export const MainPage: React.FC = () => {    
     return (
         <>
-                <Layout >
-                    <Sider>
+            <div className="main-container">
+                <Layout>
+                    <Sider style={{width:500}} trigger={null} collapsible>
                         <div className='logo'>
                             <img src={Logo} alt="Logo"/>
                         </div>
                         <div>
-                            <ul>
+                            <ul className='menu-ul'>
                                 <li>
                                     <Button>
                                         <CalendarTwoTone style={{ color: '#2F54EB' }} twoToneColor="#2F54EB"/>
@@ -42,7 +55,7 @@ export const MainPage: React.FC = () => {
                                 </li>
                             </ul>
                         </div>
-                    </Sider>                
+                    </Sider>
                     <Layout>
                         <Header>
                         <div className='header-box'>
@@ -59,7 +72,7 @@ export const MainPage: React.FC = () => {
                         </div>
                         </Header>
                         <Content>
-                            <div className='card-box actions'>
+                        <div className='card-box actions'>
                                 CleverFit ты сможешь:
                                 <br/>— планировать свои тренировки 
                                 на календаре, выбирая тип и уровень нагрузки; 
@@ -99,11 +112,12 @@ export const MainPage: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>    
+                            </div>
                         </Content>
                         <Footer>Footer</Footer>
                     </Layout>
                 </Layout>
+            </div>  
         </>
     );
 };
