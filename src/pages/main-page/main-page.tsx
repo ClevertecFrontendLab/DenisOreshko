@@ -23,7 +23,7 @@ export const MainPage: React.FC = () => {
         <>
             <div className="main-container">
                 <Layout>
-                    <Sider style={{width:500}} trigger={null} collapsible>
+                    <Sider data-test-id="slider-switch" style={{width:500}} trigger={null} collapsible>
                         <div className='logo'>
                             <img src={Logo} alt="Logo"/>
                         </div>

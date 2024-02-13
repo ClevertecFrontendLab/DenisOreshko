@@ -139,10 +139,14 @@
 .menu-ul{
     width: 208px;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .menu-ul button{
     padding: 0;
     display: flex;
+    
     align-items: center;
     padding: 16px;
     width: 208px;
