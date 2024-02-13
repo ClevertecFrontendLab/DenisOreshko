@@ -29,7 +29,7 @@ export const MainPage: React.FC = () => {
         <>
             <div className="main-container">
                 <Layout>
-                    <Sider data-test-id="slider-switch" width={208} trigger={null} collapsible>
+                    <Sider data-test-id="slider-switch" width={208} trigger={null} collapsible collapsed={collapsed}>
                         <div className='slider-menu-box'>
                             <div>
                                 <div className='logo'>
@@ -93,6 +93,10 @@ export const MainPage: React.FC = () => {
                                 <br/>— выполнять расписанные тренировки для разных частей тела, следуя подробным инструкциям 
                                 и советам профессиональных тренеров.
                             </div>
+                            {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                                className: 'trigger',
+                                onClick: () => setCollapsed(!collapsed),
+                            })}
                             <div className='container-big-mini'>
                                 <div className='card-box wrapp'>
                                     CleverFit — это не просто приложение,
