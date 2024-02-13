@@ -35,10 +35,10 @@ export const MainPage: React.FC = () => {
                                 <div className='logo'>
                                     <img src={Logo} alt="Logo"/>
                                 </div>
-                                <ul className='menu-ul'>
+                                {/* <ul className='menu-ul'>
                                     <li>
                                         <Button>
-                                            <CalendarTwoTone style={{ color: '#2F54EB' }} twoToneColor="#2F54EB"/>
+                                            <CalendarTwoTone style={{ color: '#061178' }} twoToneColor="#2F54EB"/>
                                             Календарь
                                         </Button> 
                                     </li>
@@ -60,7 +60,34 @@ export const MainPage: React.FC = () => {
                                             Профиль
                                         </Button>
                                     </li>
-                                </ul>
+                                </ul> */}
+                                <Menu
+                                    theme="light"
+                                    mode="inline"
+                                    defaultSelectedKeys={['1']}
+                                    items={[
+                                        {
+                                            key: '1',
+                                            icon: <CalendarOutlined style={{ color: '#061178' }} />,
+                                            label: 'Календарь',
+                                        },
+                                        {
+                                            key: '2',
+                                            icon: <HeartFilled />,
+                                            label: 'Тренировки',
+                                        },
+                                        {
+                                            key: '3',
+                                            icon: <TrophyFilled />,
+                                            label: 'Достижения',
+                                        },
+                                        {
+                                            key: '4',
+                                            icon: <IdcardOutlined />,
+                                            label: 'Профиль',
+                                        },
+                                    ]}
+                                />
                             </div>
                             <Button className='exit-btn'><img src={Exit}/>Выход</Button>
                         </div>
