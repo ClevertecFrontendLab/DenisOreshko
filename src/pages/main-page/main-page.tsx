@@ -111,7 +111,7 @@ export const MainPage: React.FC = () => {
                                 и советам профессиональных тренеров.
                             </div>
                             <div data-test-id='slider-switch' className='side-menu-switcher'  onClick={toggleCollapsed} >
-                                {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined  />}
+                                {collapsed ? <MenuUnfoldOutlined style={{color:'#8C8C8C'}}/> : <MenuFoldOutlined  style={{color:'#8C8C8C'}}/>}
                             </div>
                             <div className='container-big-mini'>
                                 <div className='card-box wrapp'>
