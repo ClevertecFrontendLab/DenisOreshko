@@ -110,14 +110,14 @@ export const MainPage: React.FC = () => {
                                 <br/>— выполнять расписанные тренировки для разных частей тела, следуя подробным инструкциям 
                                 и советам профессиональных тренеров.
                             </div>
-                            <div data-test-id='slider-switch' className='side-menu-switcher'  onClick={toggleCollapsed} >
+                            <div className='side-menu-switcher'  onClick={toggleCollapsed} data-test-id='slider-switch'>
                                 {collapsed ? <MenuUnfoldOutlined style={{color:'#8C8C8C'}}/> : <MenuFoldOutlined  style={{color:'#8C8C8C'}}/>}
                             </div>
                             <div className='container-big-mini'>
                                 <div className='card-box wrapp'>
                                 CleverFit — это не просто приложение, а твой личный помощник
-                                <br/> в мире фитнеса. Не откладывай на завтра — начни тренироваться
-                                 <br/>уже сегодня!
+                                 в мире фитнеса. Не откладывай на завтра — начни тренироваться
+                                 уже сегодня!
                                 </div>
                                 <div className='mini-card-box'>
                                     <div className='mini-card'>

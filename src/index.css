@@ -40,3 +40,26 @@ h1 {
     font-weight: 700;
     line-height: 49.4px;
 }
+@media screen and (max-width: 834px) {
+    .ant-layout-header {
+        height: fit-content;
+        
+    }
+    .actions {
+        width: 578px;
+        height: 258px;
+    }
+    .wrapp {
+        width: 578px;
+        height: 126px;
+    }
+    h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 31.2px;
+    }
+    .footer-box {
+        /* padding: 237px 24px 42px 24px; */
+    }
+  }
