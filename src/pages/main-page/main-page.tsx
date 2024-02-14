@@ -19,48 +19,33 @@ import { LinkOutlined,
 
 import 'antd/dist/antd.css';
 import './main-page.css';
-import Logo from '../../resources/img/logo.svg';
+import Clever from '../../resources/img/Clever.svg';
+import Fit from '../../resources/img/fit.svg';
 import Exit from '../../resources/img/exit.svg';
 
 
 export const MainPage: React.FC = () => {  
-    const [collapsed, setCollapsed] = useState(false);  
+    const [collapsed, setCollapsed] = useState(false); 
+    const toggleCollapsed = () => {
+        setCollapsed(!collapsed);
+    }; 
     return (
         <>
             <div className="main-container">
                 <Layout>                    
-                    <Sider data-test-id='slider-switch' width={208} trigger={null} collapsible collapsed={collapsed}>
+                    <Sider  width={208} collapsedWidth={64} trigger={null} collapsible collapsed={collapsed}>
                         <div className='slider-menu-box'>
                             <div>
-                                <div className='logo'>
-                                    <img src={Logo} alt="Logo"/>
-                                </div>
-                                {/* <ul className='menu-ul'>
-                                    <li>
-                                        <Button>
-                                            <CalendarTwoTone style={{ color: '#061178' }} twoToneColor="#2F54EB"/>
-                                            Календарь
-                                        </Button> 
-                                    </li>
-                                    <li>
-                                        <Button>
-                                            <HeartFilled style={{ color: '#2F54EB' }}/>
-                                            Тренировки
-                                        </Button>
-                                    </li>
-                                    <li>
-                                        <Button>
-                                            <TrophyFilled  style={{ color: '#2F54EB' }}/>
-                                            Достижения
-                                        </Button>
-                                    </li>
-                                    <li>
-                                        <Button>
-                                            <IdcardOutlined  style={{ color: '#2F54EB' }}/>
-                                            Профиль
-                                        </Button>
-                                    </li>
-                                </ul> */}
+                                {collapsed ? 
+                                    <div className='logo collapsed-logo'>                                        
+                                        <img src={Fit} alt="Fit"/>
+                                    </div>
+                                :
+                                    <div className='logo'>                                    
+                                        <img className='show' src={Clever} alt="Clever"/>
+                                        <img src={Fit} alt="Fit"/>
+                                    </div>
+                                }                                
                                 <Menu
                                     theme="light"
                                     mode="inline"
@@ -88,8 +73,11 @@ export const MainPage: React.FC = () => {
                                         },
                                     ]}
                                 />
-                            </div>
-                            <Button className='exit-btn'><img src={Exit}/>Выход</Button>
+                            </div>                   
+                            <Button className='exit-btn'>
+                                <img src={Exit}/>
+                                {collapsed ? <span className='hide'>Выход</span>  : <span className='show'>Выход</span>}
+                             </Button>                            
                         </div>
                     </Sider>
                     <Layout>
@@ -122,11 +110,8 @@ export const MainPage: React.FC = () => {
                                 <br/>— выполнять расписанные тренировки для разных частей тела, следуя подробным инструкциям 
                                 и советам профессиональных тренеров.
                             </div>
-                            <div className='side-menu-switcher'>
-                                {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                                    className: 'trigger',
-                                    onClick: () => setCollapsed(!collapsed),
-                                })}
+                            <div data-test-id='slider-switch' className='side-menu-switcher'  onClick={toggleCollapsed} >
+                                {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined  />}
                             </div>
                             <div className='container-big-mini'>
                                 <div className='card-box wrapp'>
